@@ -64,37 +64,38 @@ const columns = [
     {
       name: 'NO',
       selector: 'index',
-      width : '50px',
+      width : '5%',
       center : 'true',
     },
     {
       name: '상태',
       selector: 'type',
-      width : '80px',
+      width : '7%',
       center : 'true',
     },
     {
         name: '제목',
         selector: 'title',
-        width : '510px',
+        width : '55%',
         center : 'true',
       },
     {
       name: '작성자',
       selector: 'regId',
-      width : '120px',
+      width : '10%',
       center : 'true',
     },
     {
         name: '작성일',
         selector: 'regDatetime',
-        width : '80px',
+        width : '10%',
         center : 'true',
       },
     {
         name: '조회',
         selector: 'view',
         center : 'right',
+        width : '10%',
       },
   ];
 

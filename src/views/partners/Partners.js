@@ -5,6 +5,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink} from 'reactstrap';
 import classnames from 'classnames';
 import Question from './Question';
 import Notice from './Notice';
+import Answer from './Answer';
 
 
 export default class Partners extends Component{
@@ -98,6 +99,11 @@ export default class Partners extends Component{
                 <TabPane tabId="2">
                     <Question data="test" />
                 </TabPane>
+                
+                <TabPane tabId="3">
+                    <Answer />
+                </TabPane>
+                
                 </TabContent>
             </div>
         );

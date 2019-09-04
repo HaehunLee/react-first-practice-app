@@ -1,29 +1,42 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import './Notice.css'
-import { Row, Col, Button } from 'reactstrap';
-import classnames from 'classnames';
+import { Row, Col, FormGroup, Input } from 'reactstrap';
+//import classnames from 'classnames';
 import DataTable from 'react-data-table-component';
-import QuestionModal from '../../components/modal/QuestioModal';
 
 let testData2 = [
     {
         index : '1',
         type : '답변완료',
-        title : '안녕하세요? 모니카나인 살롱케어닝 담당자 지정 관련 안내드립니다.',
-        regId : '미자 운영진',
-        company : '모니카나인살롱케어',
-        regDatetime : '19.08.12',
-        view : '12'
+        writer : '모니카나인살롱케어',
+        title : '안녕하세요? 미페이 충전 방법에 대해서 문의드립니다.',
+        regId : '-',
+        regDatetime : '-',
     },
     {
         index : '2',
-        type : '대기',
-        title : '안녕하세요? 모니카나인 살롱케어닝 담당자 지정 관련 안내드립니다.',
+        type : '답변완료',
+        writer : '모니카나인살롱케어',
+        title : '안녕하세요? 미페이 충전 방법에 대해서 문의드립니다.',
         regId : '미자 운영진',
-        company : '모니카나인살롱케어',
         regDatetime : '19.08.12',
-        view : '12'
+    },
+    {
+        index : '3',
+        type : '미답변',
+        writer : '모니카나인살롱케어',
+        title : '안녕하세요? 미페이 충전 방법에 대해서 문의드립니다.',
+        regId : '미자 운영진',
+        regDatetime : '19.08.12',
+    },
+    {
+        index : '4',
+        type : '미답변',
+        writer : '모니카나인살롱케어',
+        title : '안녕하세요? 미페이 충전 방법에 대해서 문의드립니다.',
+        regId : '미자 운영진',
+        regDatetime : '19.08.12',
     },
 ]
 
@@ -38,48 +51,42 @@ const columns2 = [
     {
       name: 'NO',
       selector: 'index',
-      width : '5%',
+      width : '50px',
       center : 'true',
     },
     {
       name: '상태',
       selector: 'type',
-      width : '8%',
+      width : '70px',
+      center : 'true',
+    },
+    {
+      name: '작성자',
+      selector: 'writer',
+      width : '140px',
       center : 'true',
     },
     {
       name: '제목',
       selector: 'title',
-      width : '45%',
+      width : '450px',
       center : 'true',
       },
     {
-      name: '지정 입점사',
-      selector: 'company',
-      width : '15%',
-      center : 'true',
-    },
-    {
-      name: '작성자',
+      name: '답변자',
       selector: 'regId',
-      width : '10%',
+      width : '120px',
       center : 'true',
     },
     {
       name: '작성일',
       selector: 'regDatetime',
-      width : '9%',
+      width : '80px',
       center : 'true',
-      },
-    {
-      name: '조회',
-      selector: 'view',
-      center : 'true',
-      width : '7%',
       },
   ];
 
-  export default class Question extends Component{
+  export default class Answer extends Component{
 
     constructor(props){
       super(props);
@@ -108,11 +115,22 @@ const columns2 = [
         render(){
           console.log("@@ 렌더링 @@  component");
             return(
+
                 <div>
+                    <FormGroup check>
+                        <Row style= {{marginTop:10, marginLeft:10}}>
+                            <Col sm={2}>
+                            <Input type="radio" name="radio1" />{'전체보기'}
+                            </Col>
+                            <Col sm={2}>
+                            <Input type="radio" name="radio1" />{'미답변만 보기'}
+                            </Col>
+                        </Row>
+                    </FormGroup>
+
                 <Row className="notice-btn-list">
                     <Col sm="12">
-                        <Button style={{marginBottom:10}} className={classnames('notice-btn')}>
-                        삭제</Button>
+                        
                     </Col>
                     </Row>
                     <Col sm="12">
@@ -125,11 +143,8 @@ const columns2 = [
                       responsive={false}
                       defaultSortField = "index"
                       defaultSortAsc = {false}
-                      style={{fontSize:5}}    // 안먹는이유 질문!!!!!!!
+                      style={{fontSize:5}}
                       />
-                    </Col>
-                    <Col sm="12">
-                      <QuestionModal buttonLabel="글쓰기" /> 
                     </Col>
                 </div>
             )
