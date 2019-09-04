@@ -1,0 +1,19 @@
+#btn1 {
+    width:90px;
+    text-align:left;
+}
+
+#btn2 {
+    width:500px;
+    text-align:center;
+}
+
+#btn3 {
+    width:100px;
+    text-align:left;
+}
+
+#body1 {
+    background-color: aqua;
+    padding-top:1px;
+}
