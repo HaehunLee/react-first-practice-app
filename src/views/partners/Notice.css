@@ -27,7 +27,17 @@
 }
 
 .rdt_Table{
-    border-bottom : 1px solid #CCCCCC;
+    border-bottom : 1px solid #BBBBBB;
+    border-top : 1px solid #BBBBBB;
+}
+
+.rdt_TableRow {
+    border : none !important;
+}
+
+.rdt_TableHeadRow .rdt_TableCol div {
+    color : black !important;
+    font-weight: bold;
 }
 
 #parter-title {
@@ -41,5 +51,52 @@
 .nav-link.active {
     color: #495057;
     background-color: #fff;
-    border-bottom : 5px solid greenyellow !important;
 }
+
+.nav-tabs {
+    border-bottom: 1px solid black !important;
+}
+
+.onmenu {
+    border-bottom : 6px solid greenyellow;
+    width : 80px;
+    position: relative;
+    margin-left:9px;
+    margin-top:-5px;
+}
+
+.qTable {
+    font-size : 13px;
+    margin-bottom: 0;
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
+
+.qTable tr,th,td {
+    border: 1px solid #BBBBBB;
+    max-height : 2px;
+    padding-top : 7px !important;
+    padding-bottom : 7px !important;
+}
+
+.qTable input {
+    border : 0;
+    width : 100%;
+    height : 100%;
+    margin-left :-10px;
+    background-color: transparent;
+    font-size : 13px;  
+}
+
+.qTable input:focus {
+    outline : none;
+}
+
+.RichTextEditor__editor___1QqIU {
+    min-height : 150px;
+}
+
+.new-post-editor {
+    height: 400px;
+    overflow: scroll;
+  }

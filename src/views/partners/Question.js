@@ -44,7 +44,7 @@ const columns2 = [
     {
       name: '상태',
       selector: 'type',
-      width : '8%',
+      width : '7%',
       center : 'true',
     },
     {
@@ -56,7 +56,7 @@ const columns2 = [
     {
       name: '지정 입점사',
       selector: 'company',
-      width : '15%',
+      width : '13%',
       center : 'true',
     },
     {
@@ -75,7 +75,7 @@ const columns2 = [
       name: '조회',
       selector: 'view',
       center : 'true',
-      width : '7%',
+      width : '8%',
       },
   ];
 

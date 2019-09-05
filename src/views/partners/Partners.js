@@ -65,27 +65,33 @@ export default class Partners extends Component{
                 <Nav tabs>
                 <NavItem>
                     <NavLink
-                    className={classnames({ active: this.state.activeTab === '1' })}
+                    className={classnames( 'active' )}
                     onClick={() => { this.toggle('1'); }}
                     >
                     {this.state.title}
                     </NavLink>
+                    <div className={classnames({ onmenu: this.state.activeTab === '1' })}>
+                    </div>
                 </NavItem>
                 <NavItem>
                     <NavLink
-                    className={classnames({ active: this.state.activeTab === '2' })}
+                    className={classnames( 'active' )}
                     onClick={() => { this.toggle('2'); }}
                     >
                     문의하기
                     </NavLink>
+                    <div className={classnames({ onmenu: this.state.activeTab === '2' })}>
+                    </div>
                 </NavItem>
                 <NavItem>
                     <NavLink
-                    className={classnames({ active: this.state.activeTab === '3' })}
+                    className={classnames( 'active' )}
                     onClick={() => { this.toggle('3'); }}
                     >
                     답변하기
                     </NavLink>
+                    <div className={classnames({ onmenu: this.state.activeTab === '3' })}>
+                    </div>
                 </NavItem>
                 </Nav>
 

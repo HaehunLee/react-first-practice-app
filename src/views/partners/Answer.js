@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import './Notice.css'
-import { Row, Col, FormGroup, Input } from 'reactstrap';
+import { Row, Col, FormGroup, Input, Label } from 'reactstrap';
 //import classnames from 'classnames';
 import DataTable from 'react-data-table-component';
 
@@ -51,37 +51,37 @@ const columns2 = [
     {
       name: 'NO',
       selector: 'index',
-      width : '50px',
+      width : '5%',
       center : 'true',
     },
     {
       name: '상태',
       selector: 'type',
-      width : '70px',
+      width : '7%',
       center : 'true',
     },
     {
       name: '작성자',
       selector: 'writer',
-      width : '140px',
+      width : '15%',
       center : 'true',
     },
     {
       name: '제목',
       selector: 'title',
-      width : '450px',
+      width : '51%',
       center : 'true',
       },
     {
       name: '답변자',
       selector: 'regId',
-      width : '120px',
+      width : '10%',
       center : 'true',
     },
     {
       name: '작성일',
       selector: 'regDatetime',
-      width : '80px',
+      width : '10%',
       center : 'true',
       },
   ];
@@ -119,12 +119,14 @@ const columns2 = [
                 <div>
                     <FormGroup check>
                         <Row style= {{marginTop:10, marginLeft:10}}>
-                            <Col sm={2}>
-                            <Input type="radio" name="radio1" />{'전체보기'}
-                            </Col>
-                            <Col sm={2}>
-                            <Input type="radio" name="radio1" />{'미답변만 보기'}
-                            </Col>
+                            <Label style={{marginRight:30}}>
+                            <Input type="radio" name="radio1" />
+                            전체보기
+                            </Label>
+                            <Label>
+                            <Input type="radio" name="radio1" />
+                            미답변만 보기
+                            </Label>
                         </Row>
                     </FormGroup>
 
